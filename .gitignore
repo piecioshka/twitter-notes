@@ -1,0 +1,11 @@
+node_modules/
+dist/
+demo-dist/
+*.zip
+
+*.log
+
+coverage/
+.nyc_output/
+.vite/
+tmp/

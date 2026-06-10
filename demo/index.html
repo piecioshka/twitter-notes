@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Notes — interactive demo</title>
+  </head>
+  <body>
+    <div class="dx-shell">
+      <header class="dx-topbar">
+        <div class="dx-brand">📝 Twitter Notes — interactive demo</div>
+        <nav class="dx-tabs">
+          <button id="dx-tab-profile" type="button" class="dx-tab dx-active">Profile</button>
+          <button id="dx-tab-notes" type="button" class="dx-tab">All notes</button>
+        </nav>
+        <button id="dx-reset" type="button" class="dx-reset">Reset demo</button>
+      </header>
+
+      <!-- ===== Profile view (mock X) ===== -->
+      <section id="dx-view-profile" class="dx-view">
+        <div class="dx-profile">
+          <div class="dx-banner"></div>
+          <div class="dx-pheader">
+            <div id="dx-avatar" class="dx-avatar dx-av-blue">N</div>
+            <button type="button" class="dx-followbtn">Following</button>
+          </div>
+          <div id="dx-identity" class="dx-identity">
+            <div id="dx-name" class="dx-name">Naval</div>
+            <div id="dx-handle" class="dx-handle">@naval</div>
+          </div>
+          <!-- the extension note panel is injected right here, after the identity block -->
+          <div id="dx-bio" class="dx-bio"></div>
+          <div class="dx-stats"><strong>1,234</strong> Following · <strong>2.1M</strong> Followers</div>
+        </div>
+
+        <div class="dx-switch">
+          <span class="dx-switch-label">Switch profile:</span>
+          <div id="dx-switch-row" class="dx-switch-row"></div>
+        </div>
+
+        <div class="dx-people">
+          <div class="dx-people-title">Around X — avatars of noted profiles get a colored dot</div>
+          <div id="dx-people" class="dx-people-list"></div>
+        </div>
+      </section>
+
+      <!-- ===== All notes view (the real notes page markup, driven by src/options/notes.ts) ===== -->
+      <section id="dx-view-notes" class="dx-view" hidden>
+        <header class="topbar">
+          <div class="tools">
+            <input id="search" type="search" placeholder="Search by profile name or note text…" autocomplete="off" />
+            <button id="export" type="button" class="btn btn--ghost">Export JSON</button>
+            <label class="btn btn--ghost" for="import-file">Import JSON</label>
+            <input id="import-file" type="file" accept="application/json,.json" hidden />
+          </div>
+        </header>
+        <main>
+          <p id="count" class="count"></p>
+          <ul id="list" class="list"></ul>
+          <p id="empty" class="empty" hidden>You don't have any notes yet. Open any profile on x.com and click "Add note".</p>
+        </main>
+      </section>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

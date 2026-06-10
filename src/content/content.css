@@ -1,0 +1,233 @@
+/* Styles for the note panel injected on X. All classes prefixed with tn- (isolation). */
+/* Label colors must match the palette in src/colors.ts. */
+
+.tn-root,
+.tn-root * {
+  box-sizing: border-box;
+}
+
+.tn-root {
+  display: block;
+  margin: 0 0 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  --tn-accent: transparent;
+}
+
+/* theme variants */
+.tn-light {
+  --tn-fg: #0f1419;
+  --tn-muted: #536471;
+  --tn-border: #cfd9de;
+  --tn-card: #f7f9f9;
+  --tn-hover: #eff3f4;
+}
+.tn-dark {
+  --tn-fg: #e7e9ea;
+  --tn-muted: #71767b;
+  --tn-border: #2f3336;
+  --tn-card: #16181c;
+  --tn-hover: #1d1f23;
+}
+
+.tn-panel {
+  border: 1px solid var(--tn-border);
+  border-left: 4px solid var(--tn-accent);
+  border-radius: 12px;
+  background: var(--tn-card);
+  color: var(--tn-fg);
+  padding: 10px 12px;
+}
+/* no color -> left edge matches the rest of the border */
+.tn-root:not([class*='tn-accent-']) .tn-panel {
+  border-left-color: var(--tn-border);
+}
+
+.tn-note-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--tn-fg);
+}
+.tn-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+.tn-foot-sep {
+  color: var(--tn-muted);
+  font-size: 12px;
+}
+
+.tn-textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 60px;
+  padding: 8px 10px;
+  border: 1px solid var(--tn-border);
+  border-radius: 8px;
+  background: var(--tn-card);
+  color: var(--tn-fg);
+  font: inherit;
+}
+.tn-textarea:focus {
+  outline: 2px solid #1d9bf0;
+  outline-offset: -1px;
+}
+
+.tn-colors {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+.tn-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--tn-border);
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tn-muted);
+  font-size: 13px;
+  line-height: 1;
+}
+.tn-swatch--active {
+  outline: 2px solid var(--tn-fg);
+  outline-offset: 1px;
+}
+.tn-swatch-none {
+  background: transparent;
+}
+
+.tn-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+.tn-btn {
+  cursor: pointer;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  padding: 6px 14px;
+  font: inherit;
+  font-weight: 700;
+}
+.tn-btn--primary {
+  background: #1d9bf0;
+  color: #fff;
+}
+.tn-btn--primary:hover {
+  background: #1a8cd8;
+}
+.tn-btn--ghost {
+  background: transparent;
+  color: var(--tn-fg);
+  border-color: var(--tn-border);
+}
+.tn-btn--ghost:hover {
+  background: var(--tn-hover);
+}
+.tn-btn--danger {
+  background: transparent;
+  color: #f4212e;
+  border-color: #f4212e;
+}
+.tn-btn--danger:hover {
+  background: rgba(244, 33, 46, 0.1);
+}
+
+.tn-links {
+  margin-top: 8px;
+}
+.tn-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1d9bf0;
+  font: inherit;
+  font-size: 12px;
+}
+.tn-link:hover {
+  text-decoration: underline;
+}
+
+/* palette — swatch/dot backgrounds */
+.tn-bg-red { background-color: #f4212e; }
+.tn-bg-orange { background-color: #ff7a00; }
+.tn-bg-yellow { background-color: #ffd400; }
+.tn-bg-green { background-color: #00ba7c; }
+.tn-bg-blue { background-color: #1d9bf0; }
+.tn-bg-purple { background-color: #7856ff; }
+.tn-bg-pink { background-color: #f91880; }
+.tn-bg-teal { background-color: #00b8d4; }
+.tn-bg-lime { background-color: #a3e635; }
+.tn-bg-brown { background-color: #8b5e34; }
+.tn-bg-indigo { background-color: #6366f1; }
+
+/* palette — panel left-edge accent */
+.tn-accent-red { --tn-accent: #f4212e; }
+.tn-accent-orange { --tn-accent: #ff7a00; }
+.tn-accent-yellow { --tn-accent: #ffd400; }
+.tn-accent-green { --tn-accent: #00ba7c; }
+.tn-accent-blue { --tn-accent: #1d9bf0; }
+.tn-accent-purple { --tn-accent: #7856ff; }
+.tn-accent-pink { --tn-accent: #f91880; }
+.tn-accent-teal { --tn-accent: #00b8d4; }
+.tn-accent-lime { --tn-accent: #a3e635; }
+.tn-accent-brown { --tn-accent: #8b5e34; }
+.tn-accent-indigo { --tn-accent: #6366f1; }
+
+/* ===== avatar note badge (a small colored dot) ===== */
+[data-tn-badge] {
+  position: relative;
+}
+.tn-badge {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--tn-badge-ring, #71767b);
+  border: 2px solid #15181c;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+.tn-ring-red { --tn-badge-ring: #f4212e; }
+.tn-ring-orange { --tn-badge-ring: #ff7a00; }
+.tn-ring-yellow { --tn-badge-ring: #ffd400; }
+.tn-ring-green { --tn-badge-ring: #00ba7c; }
+.tn-ring-blue { --tn-badge-ring: #1d9bf0; }
+.tn-ring-purple { --tn-badge-ring: #7856ff; }
+.tn-ring-pink { --tn-badge-ring: #f91880; }
+.tn-ring-teal { --tn-badge-ring: #00b8d4; }
+.tn-ring-lime { --tn-badge-ring: #a3e635; }
+.tn-ring-brown { --tn-badge-ring: #8b5e34; }
+.tn-ring-indigo { --tn-badge-ring: #6366f1; }
+
+/* ===== note injected into X's native hover card (inherits the card's theme) ===== */
+.tn-hc-note {
+  border-top: 1px solid rgba(127, 127, 127, 0.25);
+  border-left: 3px solid var(--tn-accent, transparent);
+  padding: 10px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+.tn-hc-label {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 2px;
+}
+.tn-hc-text {
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

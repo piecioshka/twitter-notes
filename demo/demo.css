@@ -1,0 +1,240 @@
+/* Demo chrome + mock X profile. Prefix dx-. Forces a dark, X-like theme. */
+
+/* Force the dark palette for the reused notes.css view (overrides its :root). */
+:root {
+  --fg: #e7e9ea;
+  --muted: #71767b;
+  --border: #2f3336;
+  --card: #16181c;
+  --bg: #000000;
+  --hover: #1d1f23;
+  --accent: #1d9bf0;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #e7e9ea;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.dx-shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.dx-topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #2f3336;
+}
+.dx-brand {
+  font-weight: 800;
+  font-size: 17px;
+  flex: 1 1 auto;
+}
+.dx-tabs {
+  display: flex;
+  gap: 4px;
+  background: #16181c;
+  border-radius: 9999px;
+  padding: 3px;
+}
+.dx-tab {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #e7e9ea;
+  font: inherit;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 9999px;
+}
+.dx-tab.dx-active {
+  background: #1d9bf0;
+  color: #fff;
+}
+.dx-reset {
+  cursor: pointer;
+  border: 1px solid #2f3336;
+  background: transparent;
+  color: #71767b;
+  font: inherit;
+  border-radius: 9999px;
+  padding: 6px 12px;
+}
+.dx-reset:hover {
+  background: #1d1f23;
+  color: #e7e9ea;
+}
+
+/* ===== mock X profile ===== */
+.dx-profile {
+  border: 1px solid #2f3336;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+}
+.dx-banner {
+  height: 140px;
+  background: linear-gradient(120deg, #1d9bf0 0%, #7856ff 100%);
+}
+.dx-pheader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 16px;
+  margin-top: -40px;
+}
+.dx-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 4px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+}
+.dx-av-blue {
+  background: #1d9bf0;
+}
+.dx-av-green {
+  background: #00ba7c;
+}
+.dx-av-purple {
+  background: #7856ff;
+}
+.dx-av-orange {
+  background: #ff7a00;
+}
+.dx-followbtn {
+  cursor: pointer;
+  border: 1px solid #536471;
+  background: transparent;
+  color: #e7e9ea;
+  font: inherit;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 8px 18px;
+  margin-bottom: 8px;
+}
+.dx-identity {
+  padding: 8px 16px 0;
+}
+.dx-name {
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.dx-handle {
+  color: #71767b;
+  font-size: 15px;
+}
+.dx-bio {
+  padding: 12px 16px 0;
+  line-height: 1.4;
+}
+.dx-stats {
+  padding: 12px 16px 16px;
+  color: #71767b;
+  font-size: 14px;
+}
+.dx-stats strong {
+  color: #e7e9ea;
+}
+
+/* the injected extension panel sits between identity and bio; give it side padding */
+.dx-profile .tn-root {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.dx-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.dx-switch-label {
+  color: #71767b;
+  font-size: 14px;
+}
+.dx-switch-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.dx-chip {
+  cursor: pointer;
+  border: 1px solid #2f3336;
+  background: #16181c;
+  color: #e7e9ea;
+  font: inherit;
+  border-radius: 9999px;
+  padding: 6px 14px;
+}
+.dx-chip.dx-active {
+  border-color: #1d9bf0;
+  color: #1d9bf0;
+}
+
+/* ===== "Around X" people list (avatars get the real extension badge) ===== */
+.dx-people {
+  margin-top: 20px;
+  border: 1px solid #2f3336;
+  border-radius: 16px;
+}
+.dx-people-title {
+  padding: 12px 16px;
+  font-weight: 800;
+  border-bottom: 1px solid #2f3336;
+}
+.dx-people-list {
+  display: flex;
+  flex-direction: column;
+}
+.dx-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+}
+.dx-person:hover {
+  background: #16181c;
+}
+.dx-pavatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  flex: none;
+}
+.dx-person-name {
+  font-weight: 700;
+}
+.dx-person-handle {
+  color: #71767b;
+  font-size: 14px;
+}
+
+/* keep the reused notes.css topbar inside the demo card, not full-bleed */
+#dx-view-notes .topbar {
+  position: static;
+  border-radius: 16px 16px 0 0;
+}
+#dx-view-notes main {
+  padding-top: 8px;
+}

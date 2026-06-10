@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Notes — private notes on X profiles",
+  "description": "Add private notes to profiles on X.com (Twitter). Data stays local and is visible only to you.",
+  "version": "0.1.0",
+  "icons": {
+    "16": "public/icons/16.png",
+    "48": "public/icons/48.png",
+    "128": "public/icons/128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://x.com/*", "https://twitter.com/*"],
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["src/content/content.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Twitter Notes — all notes",
+    "default_icon": {
+      "16": "public/icons/16.png",
+      "48": "public/icons/48.png",
+      "128": "public/icons/128.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/options/notes.html",
+    "open_in_tab": true
+  }
+}

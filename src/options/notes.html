@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Notes — all notes</title>
+    <link rel="stylesheet" href="./notes.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>📝 Twitter Notes</h1>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Search by profile name or note text…" autocomplete="off" />
+        <button id="export" type="button" class="btn btn--ghost">Export JSON</button>
+        <label class="btn btn--ghost" for="import-file">Import JSON</label>
+        <input id="import-file" type="file" accept="application/json,.json" hidden />
+      </div>
+    </header>
+
+    <main>
+      <p id="count" class="count"></p>
+      <ul id="list" class="list"></ul>
+      <p id="empty" class="empty" hidden>You don't have any notes yet. Open any profile on x.com and click "Add note".</p>
+    </main>
+
+    <script type="module" src="./notes.ts"></script>
+  </body>
+</html>

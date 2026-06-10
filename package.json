@@ -1,0 +1,43 @@
+{
+  "name": "twitter-notes",
+  "version": "0.1.0",
+  "description": "Private notes for X.com (Twitter) profiles — Chrome extension (Manifest V3)",
+  "keywords": [
+    "chrome-extension",
+    "manifest-v3",
+    "browser-extension",
+    "twitter",
+    "x",
+    "notes",
+    "privacy"
+  ],
+  "author": {
+    "name": "piecioshka",
+    "email": "piecioshka@gmail.com",
+    "url": "https://piecioshka.pl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/piecioshka/twitter-notes.git"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "demo": "vite --config vite.config.demo.ts",
+    "demo:build": "vite build --config vite.config.demo.ts",
+    "package": "npm run build && rm -f twitter-notes.zip && (cd dist && zip -qr -FS ../twitter-notes.zip . -x '*.map' '*.DS_Store' '*.svg')"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0",
+    "@types/chrome": "^0.0.287",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}
