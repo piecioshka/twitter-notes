@@ -32,6 +32,12 @@ label, then open the **All notes** tab — search, edit, delete and export/impor
 **Reset demo** to clear the sample data. Build a static version with `npm run demo:build`
 (outputs to `demo-dist/`).
 
+## Download 📥
+
+You can download the extension from the
+[Chrome Web Store](https://chromewebstore.google.com/detail/igobcjeobamlclonjpgkkjjjbmffcoma)
+or build it locally from the repository (see below).
+
 ## Requirements 📋
 
 - Node.js 24 LTS (`node -v`)
