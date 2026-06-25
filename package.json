@@ -1,6 +1,7 @@
 {
   "name": "twitter-notes",
   "version": "0.1.0",
+  "license": "MIT",
   "description": "Private notes for X.com (Twitter) profiles — Chrome extension (Manifest V3)",
   "keywords": [
     "chrome-extension",
