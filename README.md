@@ -1,6 +1,6 @@
 # Twitter Notes — private notes on X profiles
 
-![typescript](https://img.shields.io/badge/built%20with-TypeScript-3178c6.svg)
+![TypeScript](https://img.shields.io/badge/built%20with-TypeScript-3178c6.svg)
 
 🧩 Chrome extension (Manifest V3) that lets you add **private notes to profiles
 on X.com (Twitter)**. Data is stored locally only (`chrome.storage.local`) — there is no
