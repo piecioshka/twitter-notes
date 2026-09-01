@@ -1,5 +1,11 @@
 # Twitter Notes — private notes on X profiles
 
+<!-- prettier-ignore-start -->
+
+[![github-ci](https://github.com/piecioshka/twitter-notes/actions/workflows/ci.yml/badge.svg)](https://github.com/piecioshka/twitter-notes/actions/workflows/ci.yml)
+
+<!-- prettier-ignore-end -->
+
 ![TypeScript](https://img.shields.io/badge/built%20with-TypeScript-3178c6.svg)
 
 🧩 Chrome extension (Manifest V3) that lets you add **private notes to profiles
