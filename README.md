@@ -32,7 +32,7 @@ Try the UI without installing the extension or logging in to X: see the demo ins
 
 You can download the extension from the
 [Chrome Web Store](https://chromewebstore.google.com/detail/igobcjeobamlclonjpgkkjjjbmffcoma)
-or build it locally from the repository (see below).
+or build it locally (see [CONTRIBUTING.md](CONTRIBUTING.md)).
 
 ## Notes ⚠️
 
