@@ -94,7 +94,7 @@ Certify all three (true for this extension — check all):
 ## Other listing assets (reference)
 
 - **Store icon:** 128×128 PNG (`public/icons/128.png`).
-- **Screenshots:** 1280×800, 24-bit PNG, no alpha — `screenshots/` (light mode). ✓ verified format.
+- **Screenshots:** 1280×800, 24-bit PNG, no alpha — `docs/screenshots/` (light mode). ✓ verified format.
 - **Promo tiles** (optional): Small 440×280, Marquee 1400×560 — can be left empty.
 - **Homepage URL:** `https://github.com/piecioshka/twitter-notes`
 - **Support URL:** `https://github.com/piecioshka/twitter-notes/issues` _(currently empty — worth adding)_
